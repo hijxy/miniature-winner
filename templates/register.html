@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <title>注册</title>
+</head>
+<body>
+
+
+    <div class="container">
+      {{template "header"}}
+      <div class="container col-xxl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Where spirits find their rest/注册</h1>
+            <p class="col-lg-10 fs-4">Welcome to Myblog, a sanctuary where words weave poetry and thoughts bloom into wisdom.
+               Here, time's whispers are captured, offering a serene retreat for the spirit to reflect and grow. 
+               Embrace the simplicity, find the profound.
+            </p>
+          </div>
+
+
+
+          <div class="col-md-10 mx-auto col-lg-5">
+            <form method="post" action="/register" class="p-4 p-md-5 border rounded-3 bg-body-tertiary" >
+              <p >{{.}}</p>
+              <div class="form-floating mb-3">
+                <input type="text" name="username" class="form-control" id="exampleInputEmail1">
+                <label for="floatingInput" >Username</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                <label for="floatingPassword" >Password</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" name="password2" class="form-control" id="exampleInputPassword1">
+                <label for="floatingPassword" >Confirm the password</label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+              <hr class="my-4">
+              <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+            </form>
+          </div>
+    
+
+        </div>
+      </div>     
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

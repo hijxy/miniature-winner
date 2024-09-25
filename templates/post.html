@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/editormd/css/editormd.css">
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+       
+
+
+    <div class="container">
+        {{template "header"}}
+        <br>
+        <div class="d-flex gap-2 justify-content-center py-5">
+            <h2>Have no idea how to utilize markdown?</h2>
+            <button class="btn btn-light rounded-pill px-5" type="button"><a href="https://markdown.com.cn/basic-syntax/" target="_blank" class="fs-5">Click here!</a></button>
+        </div>
+
+
+    
+        <div class="justify-content-center">
+            <form action="/post" method="post">
+                <label for="title" class="d-flex gap-2 justify-content-center"><h1>请输入标题</h1></label>
+                <input type="text" name="title" class="form-control" id="title"><br>
+                <label for="tag" class="d-flex gap-2 justify-content-center "><h1>请输入标签</h1></label>
+                <input type="text" name="tag" class="form-control" id="tag"><br>
+                <label for="tag" class="d-flex gap-2 justify-content-center "><h1>请开始你的Blog</h1></label>
+                <br>
+            </form>
+        </div>
+        
+            
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="test-editor">
+                <textarea style="display:none;">## Here! Writing your own blog
+                </textarea>
+                </div>
+                <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+                <script src="/assets/editormd/editormd.min.js"></script>
+                <script type="text/javascript">
+                $(function() {
+                    var editor = editormd("test-editor", {
+                        width  : "100%",
+                        height : 620,
+                        path   : "assets/editormd/lib/",
+                    });
+                });
+                </script>
+            </div>
+        </div>
+
+        
+
+       
+        <div class="d-flex gap-2 justify-content-center py-5">
+        <form action="/post" method="post">
+        <button type="submit" class="btn btn-light rounded-pill px-3"><h1>添加</h1></button>
+        </form>
+        </div>
+        <br>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
